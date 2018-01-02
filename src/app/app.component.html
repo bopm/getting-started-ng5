@@ -7,4 +7,4 @@
     <app-new-card-input (onCardAdd)="addCard($event)"></app-new-card-input>
   </div>
 </div>
-<app-card-list [cards]="cards"></app-card-list>
+<app-card-list [cards]="cards$ | async"></app-card-list>
