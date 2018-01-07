@@ -28,8 +28,10 @@ export class CardService {
     return card;
   }
 
-  createCard(card: Card): void {
-    this.cardsRef.push(card);
+  createCard(card: Card): Card {
+    const promise = this.cardsRef.push(card);
+    card.$key = promise.key;
+    return card;
   }
 
   updateCard(key: string, value: any): void {

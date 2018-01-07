@@ -210,6 +210,10 @@
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@ngrx/core/-/core-1.2.0.tgz#882b46abafa2e0e6d887cb71a1b2c2fa3e6d0dc6"
 
+"@ngrx/effects@^4.1.1":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-4.1.1.tgz#cb758b8527964b258ea41951f59aa144e3ef9fae"
+
 "@ngrx/store@^4.1.1":
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-4.1.1.tgz#680e34df2775e8852754ed777ffac95bd81b7de0"
@@ -3713,6 +3717,10 @@ ncname@1.0.x:
 negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
+
+ngrx-store-logger@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/ngrx-store-logger/-/ngrx-store-logger-0.2.0.tgz#9bef9447bc91d8e35a2aa6ae1c5a57ea51036694"
 
 no-case@^2.2.0:
   version "2.3.2"

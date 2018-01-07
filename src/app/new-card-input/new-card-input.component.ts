@@ -1,6 +1,7 @@
 import {Component, EventEmitter, OnInit, OnDestroy, Output, HostListener} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { takeWhile, debounceTime, filter } from 'rxjs/operators';
+import { Card } from '../models/card';
 
 @Component({
   selector: 'app-new-card-input',
@@ -10,13 +11,13 @@ import { takeWhile, debounceTime, filter } from 'rxjs/operators';
 })
 export class NewCardInputComponent implements OnInit, OnDestroy {
   private alive = true;
-  @Output() onCardAdd = new EventEmitter<string>();
-  
+  @Output() onCardAdd = new EventEmitter<Card>();
+
   newCardForm: FormGroup;
 
   @HostListener('document:keypress', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
-    if (event.code === "Enter" && this.newCardForm.valid) {
+    if (event.code === 'Enter' && this.newCardForm.valid) {
       this.addCard(this.newCardForm.controls['text'].value);
      }
   }
@@ -43,7 +44,7 @@ export class NewCardInputComponent implements OnInit, OnDestroy {
   }
 
   addCard(text) {
-    this.onCardAdd.emit(text);
+    this.onCardAdd.emit(new Card(text));
     this.newCardForm.controls['text'].setValue('');
   }
 
