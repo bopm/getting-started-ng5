@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="ng2.template" datatype="plaintext" source-language="en" target-language="ru">
+    <body>
+      <trans-unit id="80dcbb43f590ee82c132b8c725df2b7b433dc10e">
+        <source xml:lang="en">Cards App</source>
+        <target xml:lang="ru">Картотека</target>
+      </trans-unit>
+  </body>
+  </file>
+</xliff>
