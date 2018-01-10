@@ -8,7 +8,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build-i18n": "for lang in en ru; do yarn run ng build --output-path=dist/$lang --aot -prod --bh /$lang/ --i18n-file=src/messages.$lang.xlf --i18n-format=xlf --locale=$lang --missing-translation=warning; done"
   },
   "private": true,
   "dependencies": {
@@ -41,6 +42,9 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "codelyzer": "^4.0.1",
+    "gulp": "3.9.1",
+    "gulp-gzip": "^1.4.0",
+    "gulp-zip": "4.1.0",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
     "karma": "~1.7.0",
