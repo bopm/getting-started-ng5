@@ -16,7 +16,7 @@ WORKDIR $APP_PATH
 COPY . .
 
 ## Build the angular app in production mode and store the artifacts in dist folder
-RUN yarn add --force node-sass@4.5.3 && yarn run build-i18n && yarn run gulp compress
+RUN yarn remove node-sass && yarn add node-sass && yarn run build-i18n && yarn run gulp compress
 
 ### STAGE 2: Setup ###
 FROM nginx:1.13.3-alpine
